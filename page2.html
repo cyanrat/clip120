@@ -77,7 +77,7 @@
       text-align: center;
     }
 
-    .board {
+   .board {
   background: #fffdf9;
   border: 2px dashed #cc3366;
   border-radius: 16px;
@@ -92,17 +92,21 @@
   position: relative;
   line-height: 1.7;
 }
-    .board::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 20px;
-      background: #cc3366;
-      border-radius: 10px 10px 0 0;
-    }
+
+/* Hiasan seperti pin di atas board */
+.board::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  background: #cc3366;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
     .play-button {
       margin-top: 20px;
