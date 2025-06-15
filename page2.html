@@ -4,15 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday!</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom, #fff6f0, #ffe4e1);
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
+    }
+
+    /* Background image overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('ojan.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      filter: grayscale(100%);
+      z-index: -1;
     }
 
     h1 {
@@ -28,7 +46,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      padding: 40px 20px;
+      padding: 20px;
       max-width: 1000px;
     }
 
@@ -60,7 +78,7 @@
     }
 
     .board {
-      background: #fffaf0;
+      background: rgba(255, 250, 240, 0.85);
       border: 4px solid #cc3366;
       border-radius: 12px;
       padding: 30px 20px;
@@ -68,9 +86,10 @@
       max-width: 700px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       text-align: justify;
-      font-size: 0.87em;
+      font-size: 0.95em;
       color: #333;
       position: relative;
+      font-family: 'Lora', serif;
     }
 
     .board::before {
@@ -108,6 +127,7 @@
 
   <h1>Happy Birthday!</h1>
 
+  <!-- Tetap tampilkan polaroid -->
   <div class="gallery">
     <div class="polaroid" style="--rotate: -3deg">
       <img src="ojan.jpeg" alt="Polaroid" />
@@ -115,18 +135,20 @@
     </div>
   </div>
 
+  <!-- Papan ucapan -->
   <div class="board">
-    Hari yang ditunggu tunggu telah tiba. Selamat ulang tahun untuk wanitaku yang paling aku sayangi dan akuu cintaii Adinda Naiylla Dyas Setianingrum. Bertambahnya usiamu, aku berharap semoga apa yang kamu harapkan dan apa yang kita harapkan bisa terwujud dan kebahagian selalu menyertaimu. Aku berterima kasih dan bersyukur sudah mau bersamakuu dan aku menikmatinya. Maaf kalo aku ada salah maupun kurangnya. Kamu wanita hebat dan aku tau itu. Aku selalu bangga sama kamu bahkan hal sekecil apapun. Semoga segala yang menjadi kebahagiaanmu tak pernah meninggalkanmu, dan semoga tuhan selalu mengistimewakanmu di dalam kehidupan ini. Dan semoga aku tetaplah lelaki yang mampu memberikan keistimewaan kepada dirimu. Jadi semoga kamu makin kuat dan ingat aku selalu dibelakangmu. Hari ini, dunia merayakanmu.
+    Hari yang ditunggu tunggu telah tiba. Selamat ulang tahun untuk wanitaku yang paling aku sayangi dan aku cintai, Adinda Naiylla Dyas Setianingrum. Bertambahnya usiamu, aku berharap semoga apa yang kamu harapkan dan apa yang kita harapkan bisa terwujud dan kebahagiaan selalu menyertaimu. Aku berterima kasih dan bersyukur sudah mau bersamaku dan aku menikmatinya. Maaf kalau aku ada salah maupun kurangnya. Kamu wanita hebat dan aku tahu itu. Aku selalu bangga sama kamu bahkan untuk hal sekecil apapun. Semoga segala yang menjadi kebahagiaanmu tak pernah meninggalkanmu, dan semoga Tuhan selalu mengistimewakanmu di dalam kehidupan ini. Dan semoga aku tetaplah lelaki yang mampu memberikan keistimewaan kepada dirimu. Jadi semoga kamu makin kuat dan ingat, aku selalu di belakangmu. Hari ini, dunia merayakanmu.
+
     <br><br>
-    <strong>Teruntukmu wanita yang menjadi pengharapanku. Dinda🤍</strong>
+    <strong>Teruntukmu, wanita yang menjadi pengharapanku. Dinda 🤍</strong>
   </div>
 
-  <!-- Tombol Putar Lagu -->
+  <!-- Tombol Play Lagu -->
   <button class="play-button" onclick="document.getElementById('birthday-audio').play()">
     <img src="https://img.icons8.com/?size=100&id=398&format=png&color=000000" alt="Play Button">
   </button>
 
-  <!-- Elemen Audio -->
+  <!-- Audio -->
   <audio id="birthday-audio" src="cas.mp3"></audio>
 
 </body>
