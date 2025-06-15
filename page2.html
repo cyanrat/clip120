@@ -4,17 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday!</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: url('ojan.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      filter: grayscale(100%);
+      background: linear-gradient(to bottom, #fff6f0, #ffe4e1);
       font-family: 'Segoe UI', sans-serif;
       display: flex;
       flex-direction: column;
@@ -27,19 +21,46 @@
       color: #cc3366;
       text-shadow: 1px 1px #fff;
       text-align: center;
-      z-index: 2;
     }
 
     .gallery {
-      display: none; /* disembunyikan karena fotonya sudah jadi background */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
+    }
+
+    .polaroid {
+      background: white;
+      padding: 10px;
+      width: 180px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transform: rotate(var(--rotate));
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .polaroid:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .polaroid img {
+      width: 100%;
+      display: block;
     }
 
     .caption {
-      display: none; /* tidak diperlukan lagi */
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #444;
+      text-align: center;
     }
 
     .board {
-      background: rgba(255, 250, 240, 0.85); /* transparan agar background tetap terlihat */
+      background: #fffaf0;
       border: 4px solid #cc3366;
       border-radius: 12px;
       padding: 30px 20px;
@@ -47,11 +68,9 @@
       max-width: 700px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
       text-align: justify;
-      font-size: 0.95em;
+      font-size: 0.87em;
       color: #333;
       position: relative;
-      font-family: 'Lora', serif;
-      z-index: 2;
     }
 
     .board::before {
@@ -73,7 +92,6 @@
       cursor: pointer;
       padding: 10px;
       transition: transform 0.3s ease;
-      z-index: 2;
     }
 
     .play-button:hover {
@@ -89,6 +107,13 @@
 <body>
 
   <h1>Happy Birthday!</h1>
+
+  <div class="gallery">
+    <div class="polaroid" style="--rotate: -3deg">
+      <img src="ojan.jpeg" alt="Polaroid" />
+      <div class="caption">Teks Ini Bisa Diubah</div>
+    </div>
+  </div>
 
   <div class="board">
     Hari yang ditunggu tunggu telah tiba. Selamat ulang tahun untuk wanitaku yang paling aku sayangi dan akuu cintaii Adinda Naiylla Dyas Setianingrum. Bertambahnya usiamu, aku berharap semoga apa yang kamu harapkan dan apa yang kita harapkan bisa terwujud dan kebahagian selalu menyertaimu. Aku berterima kasih dan bersyukur sudah mau bersamakuu dan aku menikmatinya. Maaf kalo aku ada salah maupun kurangnya. Kamu wanita hebat dan aku tau itu. Aku selalu bangga sama kamu bahkan hal sekecil apapun. Semoga segala yang menjadi kebahagiaanmu tak pernah meninggalkanmu, dan semoga tuhan selalu mengistimewakanmu di dalam kehidupan ini. Dan semoga aku tetaplah lelaki yang mampu memberikan keistimewaan kepada dirimu. Jadi semoga kamu makin kuat dan ingat aku selalu dibelakangmu. Hari ini, dunia merayakanmu.
