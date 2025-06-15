@@ -7,20 +7,34 @@
   <style>
     body {
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
       background: linear-gradient(to bottom, #fff6f0, #ffe4e1);
       font-family: 'Segoe UI', sans-serif;
       display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-top: 40px;
+      font-size: 2em;
+      color: #cc3366;
+      text-shadow: 1px 1px #fff;
+      text-align: center;
+    }
+
+    .gallery {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
       gap: 30px;
+      padding: 40px 20px;
+      max-width: 1000px;
     }
 
     .polaroid {
       background: white;
       padding: 10px;
-      top: 60px;
       width: 180px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.3);
       transform: rotate(var(--rotate));
@@ -35,7 +49,6 @@
 
     .polaroid img {
       width: 100%;
-      top: 60px;
       display: block;
     }
 
@@ -45,26 +58,27 @@
       color: #444;
       text-align: center;
     }
-
-    h1 {
-      position: fixed;
-      top: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 2em;
-      color: #cc3366;
-      text-shadow: 1px 1px #fff;
-      z-index: 1;
-    }
   </style>
 </head>
 <body>
 
   <h1>💌 Teks Ini Bisa Diubah 💌</h1>
 
-  <div class="polaroid" style="--rotate: -3deg">
-    <img src="ojan.jpeg" alt="Foto 5" />
-    <div class="caption">Teks Ini Bisa Diubah</div>
+  <div class="gallery">
+    <div class="polaroid" style="--rotate: -3deg">
+      <img src="ojan.jpeg" alt="Foto 5" />
+      <div class="caption">Teks Ini Bisa Diubah</div>
+    </div>
+
+    <div class="polaroid" style="--rotate: 4deg">
+      <img src="foto2.jpg" alt="Foto 2" />
+      <div class="caption">Contoh Caption</div>
+    </div>
+
+    <div class="polaroid" style="--rotate: -5deg">
+      <img src="foto3.jpg" alt="Foto 3" />
+      <div class="caption">Contoh Caption Lain</div>
+    </div>
   </div>
 
 </body>
