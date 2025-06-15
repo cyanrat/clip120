@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buka Kado</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: paleturquoise;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .gift-container {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gift-image {
+      width: 200px;
+      height: auto;
+      animation: shake 1s infinite alternate;
+      cursor: pointer;
+    }
+
+    .text {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #333;
+      font-weight: bold;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(-5px) rotate(-2deg); }
+      100% { transform: translateX(5px) rotate(2deg); }
+    }
+
+    .glitter {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .glitter span {
+      position: absolute;
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Glitter -->
+  <div class="glitter" id="glitter-container"></div>
+
+  <!-- Gift -->
+  <div class="gift-container">
+    <img src="BOX.png" alt="Kado" class="gift-image" onclick="openGift()" />
+    <div class="text">Teks Ini Bisa Diubah</div>
+  </div>
+
+  <script>
+    function openGift() {
+      window.location.href = "page2.html";
+    }
+
+    // Generate glitter particles
+    const glitterContainer = document.getElementById('glitter-container');
+    for (let i = 0; i < 100; i++) {
+      let glitter = document.createElement('span');
+      glitter.style.left = Math.random() * 100 + '%';
+      glitter.style.animationDelay = Math.random() * 5 + 's';
+      glitter.style.width = glitter.style.height = (Math.random() * 4 + 2) + 'px';
+      glitter.style.opacity = Math.random();
+      glitterContainer.appendChild(glitter);
+    }
+  </script>
+
+</body>
+</html>
