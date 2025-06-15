@@ -87,19 +87,20 @@
 
     .play-button {
       margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #cc3366;
-      color: white;
+      background: none;
       border: none;
-      border-radius: 8px;
       cursor: pointer;
-      font-size: 1em;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
+      padding: 10px;
+      transition: transform 0.3s ease;
     }
 
     .play-button:hover {
-      background-color: #b12d59;
+      transform: scale(1.1);
+    }
+
+    .play-button img {
+      width: 50px;
+      height: 50px;
     }
   </style>
 </head>
@@ -121,7 +122,9 @@
   </div>
 
   <!-- Tombol Putar Lagu -->
-  <button class="play-button" onclick="document.getElementById('birthday-audio').play()">Putar Lagu 🎶</button>
+  <button class="play-button" onclick="document.getElementById('birthday-audio').play()">
+    <img src="https://img.icons8.com/?size=100&id=398&format=png&color=000000" alt="Play Button">
+  </button>
 
   <!-- Elemen Audio -->
   <audio id="birthday-audio" src="cas.mp3"></audio>
