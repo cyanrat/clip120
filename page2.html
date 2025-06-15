@@ -84,6 +84,23 @@
       background: #cc3366;
       border-radius: 10px 10px 0 0;
     }
+
+    .play-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #cc3366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    }
+
+    .play-button:hover {
+      background-color: #b12d59;
+    }
   </style>
 </head>
 <body>
@@ -100,8 +117,14 @@
   <div class="board">
     Hari yang ditunggu tunggu telah tiba. Selamat ulang tahun untuk wanitaku yang paling aku sayangi dan akuu cintaii Adinda Naiylla Dyas Setianingrum. Bertambahnya usiamu, aku berharap semoga apa yang kamu harapkan dan apa yang kita harapkan bisa terwujud dan kebahagian selalu menyertaimu. Aku berterima kasih dan bersyukur sudah mau bersamakuu dan aku menikmatinya.Maaf kalo aku ada salah maupun kurangnya.Kamu wanita hebat dan aku tau itu. Aku selalu bangga sama kamu bahkan hal sekecil apapun.Semoga segala yang menjadi kebahagiaanmu tak pernah meninggalkanmu, dan semoga tuhan selalu mengistimewakanmu di dalam kehidupan ini. Dan semoga aku tetaplah lelaki yang mampu memberikan keistimewaan kepada dirimuJadi semoga kamu makin kuat dan ingat aku selalu dibelakangmu. Hari ini, dunia merayakanmu.
 
-teruntukmu wanita yang menjadi pengharapanku. Dinda🤍
+    <br><br><strong>teruntukmu wanita yang menjadi pengharapanku. Dinda🤍</strong>
   </div>
+
+  <!-- Tombol Putar Lagu -->
+  <button class="play-button" onclick="document.getElementById('birthday-audio').play()">Putar Lagu 🎶</button>
+
+  <!-- Elemen Audio -->
+  <audio id="birthday-audio" src="cas.mp3"></audio>
 
 </body>
 </html>
